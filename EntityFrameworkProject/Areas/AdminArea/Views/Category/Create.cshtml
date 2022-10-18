@@ -1,0 +1,41 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-description">
+                        Category
+                    </p>
+                    <form asp-controller="Category" asp-action="Create" class="forms-sample" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">Name</label>
+                            <input type="text" class="form-control" asp-for="Name"/>
+                            <span class="text-danger my-1" asp-validation-for="Name"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2" >Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>*@
